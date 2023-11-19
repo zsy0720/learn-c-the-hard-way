@@ -7,3 +7,5 @@ return 0;
 }
 //在gcc编译中认为%c输出的是一个int类型的0，而%s对应的应该是字符串类型的内容
 //valgrind认为%s情况下输出的是null
+//long类型是有符号位的十位二进制，有正负，unsigned long是无符号数
+//int与char相乘，实际上就是int与char所对应的ascii码相乘。
