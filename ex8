@@ -1,0 +1,19 @@
+#include <stdio.h>
+   
+   int main(int argc, char *argv[])
+   {
+           int area[2];
+           area[0]=100;
+           int areas[] = {10, 12, 13, 14, 20};
+       char names[2];
+       names[0]='z',names[1]='e',names[2]='d';//单个char类型赋值注意单引号
+  
+          char name[] = "Zed";
+      char full_name[] = {
+          'Z', 'e', 'd',
+           ' ', 'A', '.', ' ',
+          'S', 'h', 'a', 'w','\0'
+      };
+      printf("the char name is %c\n",names[0]);
+  names[0]=area[0]&0xff;//int->char类型注意int是4个字节，char是一个字节，要不然强制转换，要不然与11111111最后得到一个值，这个值相当于int类型值ASCII码对应的字符
+  printf("the char name is %c\n",names[0]);
