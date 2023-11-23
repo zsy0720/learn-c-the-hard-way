@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+
+char *names;
+names[0]='a';
+names[1]='b';
+names[2]='c';
+printf("%d",names[0]);//编译器warning，未初始化names[0],编译后打印出a的ASCII值
+ return 0;
+ }
