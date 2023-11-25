@@ -27,7 +27,7 @@ int ages[] = {23, 43, 12, 89, 2};
                 cur_name[i], cur_age[i]);              //可以看出name[i]等价与*(name+i)
     }//cur_name与name表示一维数组时等价
 
-for(cur_name = names, cur_age = ages;
+for(cur_name = names, cur_age = ages;//若是地址赋值则可以直接把ages赋值给cur_age
             (cur_age - ages) < count;
             cur_name++, cur_age++)
     {
