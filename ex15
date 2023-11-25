@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main(int argc,char *argv[])
+{
+int ages[] = {23, 43, 12, 89, 2};
+      char *names[] = {
+        "Alan", "Frank",
+          "Mary", "John", "Lisa"
+      };//二维数组定义
+      int count = sizeof(ages)/sizeof(int);
+        char **cur_arg=argv;//argv定义是一个二维数组，为了表示一个二维数组用**cur_arg
+        
+        int *cur_age = ages;//一维数组表示
+    char **cur_name = names;//二维数组表示
+  
+   for(i = 0; i < count; i++) {
+        printf("%s has %d years alive.\n",
+                names[i], ages[i]);
+    }//直接表示，此时二维数组names只用一维表示方法，即一个名字是数组的一个元素
+    
+    for(i = 0; i < count; i++) {
+        printf("%s is %d years old.\n",
+                *(cur_name+i), *(cur_age+i));
+    }//*(cur_name+i)表示地址，用来存放数据
+
+    for(i = 0; i < count; i++) {
+        printf("%s is %d years old again.\n",
+                cur_name[i], cur_age[i]);              //可以看出name[i]等价与*(name+i)
+    }//cur_name与name表示一维数组时等价
+
+for(cur_name = names, cur_age = ages;
+            (cur_age - ages) < count;
+            cur_name++, cur_age++)
+    {
+        printf("%s lived %d years so far.\n",
+                *cur_name, *cur_age);
+    }//cur_age -age 表示地址之间的差值，即cur_age每个元素占据一定字节，cur_name++表示跳到下一个元素的起始地址
