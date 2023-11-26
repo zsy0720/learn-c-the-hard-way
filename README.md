@@ -17,9 +17,10 @@ int main()
 struct student stu1 = {"joe',32}, *pst;
 pst=&stu1;
 
-void print(struct student);
-void print1(char *name,int age);
-void ptinf2(struct student *);//三种参数不同的函数，最后打印出的果是一样的
+void print(struct student);//第一个函数的参数是两个结构体，可以直接把定义的结构体进行输入
+void print1(char *name,int age);第二个函数的参数是两种类型的变量。
+void ptinf2(struct student *);第三个是指针，指向结构体的地址
+//三种参数不同的函数，最后打印出的果是一样的
 
 print(stu1);
 print1(stu1.name,stu1.age);
