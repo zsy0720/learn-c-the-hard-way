@@ -19,7 +19,7 @@ pst=&stu1;
 
 void print(struct student);
 void print1(char *name,int age);
-void ptinf2(struct student *);
+void ptinf2(struct student *);//三种参数不同的函数，最后打印出的果是一样的
 
 print(stu1);
 print1(stu1.name,stu1.age);
