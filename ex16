@@ -25,7 +25,7 @@ return who;
 
 void Person_destroy(struct Pereson *who)
 { 
-  assert(who1=NULL)；
+  assert(who!=NULL)；
 
   free(who->name);
   free(who);
